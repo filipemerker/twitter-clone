@@ -1,4 +1,4 @@
-# twitter-clone
+# twitter-lite
 
 ## Database design
 - [ ] Create ERD on MySQL Workbench
