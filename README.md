@@ -10,6 +10,7 @@
 - [ ] Express
 - [ ] MVC Architecture
 - [ ] REST API
+- [ ] Documentation with Swagger
 - [ ] TDD with Jest
 - [ ] MySQL database
 - [ ] ORM with Sequelize
