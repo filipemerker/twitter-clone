@@ -1,0 +1,1 @@
+![ERD](./ERD.jpg?raw=true "Entity Relationship Diagram")
