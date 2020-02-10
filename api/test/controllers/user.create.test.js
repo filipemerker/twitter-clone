@@ -1,10 +1,43 @@
-describe('User creation', () => {
+const { create } = require('../../controllers/user')
 
-  it('Should return a user object', () => {
-    expect(typeof user).toBe('object')
+describe('User creation', () => {
+  const response = {}
+  const res = {
+    status: code => {
+      response.status = code
+
+      return { json: ({ data }) => response.data = data }
+    }
+  }
+
+  it('Should send a status code 200 if user was created', () => {
+    const user = {
+      username: 'tester',
+      password: '@4U&sk~k%WGD2&v:'
+    }
+    const req = {
+      body: { user }
+    }
+
+    return (
+      create(req, res)
+        .then(() => expect(response.status).toBe(200))
+    )
   })
 
-  it('Should return a user with a name', () => {
-    expect(user.name).toBeTruthy()
+
+  it('Should send the user data if user was created', () => {
+    const user = {
+      username: 'tester',
+      password: '@4U&sk~k%WGD2&v:'
+    }
+    const req = {
+      body: { user }
+    }
+
+    return (
+      create(req, res)
+        .then(() => expect(response.data).toEqual(user))
+    )
   })
 })
