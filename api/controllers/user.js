@@ -1,15 +1,7 @@
-const User = require('../models/User')
+const { User, Post, PostMention } = require('../models')
 
-console.log(User)
+console.log(User, Post, PostMention)
 
-exports.update = async (req, res) => {
-  console.log('Updated!', req.params.userId)
+exports.create = async (req, res) => {
 
-  res.status(200).json({ updated: true })
-}
-
-exports.get = (req, res) => {
-  console.log('Got!', req.params.userId)
-
-  res.status(200).json({ got: true })
 }

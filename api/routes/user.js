@@ -1,8 +1,7 @@
 const router = require('express').Router()
-const { get, update } = require('../controllers/user')
+const { create } = require('../controllers/user')
 
 router.route('/user/:userId')
-  .get(get)
-  .put(update)
+  .post(create)
 
 module.exports = router

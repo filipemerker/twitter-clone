@@ -7,6 +7,6 @@ app.use(urlencoded({ extended: false }))
 app.use(require('./routes/user'))
 
 sequelize
-  .sync({ force: true })
+  .sync()
   .then(() => app.listen(3000))
   .catch(err => console.log(err))

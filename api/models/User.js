@@ -10,6 +10,6 @@ const User = sequelize.define('user', {
   profile_picture: Sequelize.STRING(300),
   username: Sequelize.STRING(25),
   full_name: Sequelize.STRING(40)
-})
+}, { freezeTableName: true })
 
 module.exports = User
